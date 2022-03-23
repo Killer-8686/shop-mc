@@ -1,2 +1,4 @@
 rootProject.name = 'shop-microservise'
 
+includeBuild 'eureka-server'
+

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.6" />
+    <bytecodeTargetLevel target="1.6">
+      <module name="another-client" target="11" />
+      <module name="another-client.main" target="11" />
+      <module name="another-client.test" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

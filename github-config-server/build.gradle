@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'ru.masta.server'
+group = 'ru.masta.config'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -17,8 +17,8 @@ ext {
 }
 
 dependencies {
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
-    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.cloud:spring-cloud-config-server'
+
 }
 
 dependencyManagement {

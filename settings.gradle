@@ -4,4 +4,6 @@ includeBuild 'eureka-server'
 includeBuild 'eureka-client'
 includeBuild 'api-gateway'
 includeBuild 'github-config-server'
+includeBuild 'user-module'
+includeBuild 'order-module'
 

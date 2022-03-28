@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -26,6 +27,16 @@
                   <project path="$PROJECT_DIR$/github-config-server" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/user-module" name="user-module">
+                <projects>
+                  <project path="$PROJECT_DIR$/user-module" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/order-module" name="order-module">
+                <projects>
+                  <project path="$PROJECT_DIR$/order-module" />
+                </projects>
+              </build>
             </builds>
           </compositeBuild>
         </compositeConfiguration>
@@ -38,6 +49,8 @@
             <option value="$PROJECT_DIR$/eureka-client" />
             <option value="$PROJECT_DIR$/eureka-server" />
             <option value="$PROJECT_DIR$/github-config-server" />
+            <option value="$PROJECT_DIR$/order-module" />
+            <option value="$PROJECT_DIR$/user-module" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -74,6 +87,24 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/github-config-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/order-module" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/order-module" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/user-module" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/user-module" />
           </set>
         </option>
       </GradleProjectSettings>

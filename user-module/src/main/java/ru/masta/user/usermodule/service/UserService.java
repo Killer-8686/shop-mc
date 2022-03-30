@@ -1,7 +1,7 @@
 package ru.masta.user.usermodule.service;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
 import ru.masta.user.usermodule.entity.UserData;
 import ru.masta.user.usermodule.repo.UserRepo;
 

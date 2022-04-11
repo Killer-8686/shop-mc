@@ -15,6 +15,9 @@
       <module name="another-client" target="11" />
       <module name="another-client.main" target="11" />
       <module name="another-client.test" target="11" />
+      <module name="aop" target="11" />
+      <module name="aop.main" target="11" />
+      <module name="aop.test" target="11" />
       <module name="shop-entity" target="11" />
       <module name="shop-entity.main" target="11" />
       <module name="shop-entity.test" target="11" />

@@ -23,12 +23,11 @@ public class Purchase {
     @Column(name = "count", nullable = false)
     private Long count;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @OneToOne
     @JoinColumn(name = "item_id", nullable = false)
-
     private Item item;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
     @JoinColumn(name = "order_id", nullable = false)
     @JsonBackReference
     private Order order;

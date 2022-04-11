@@ -29,9 +29,10 @@ public class Order {
     @Column(name = "user_id")
     private Long userId;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Purchase> purchases = new ArrayList<>();
+
 
     @Override
     public boolean equals(Object o) {

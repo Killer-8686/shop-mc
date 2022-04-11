@@ -6,4 +6,6 @@ import ru.masta.orders.ordermodule.entity.Purchase;
 
 @Repository
 public interface PurchaseRepo extends JpaRepository<Purchase, Long> {
+
+    Purchase findByItemId(Long id);
 }

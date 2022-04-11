@@ -1,5 +1,7 @@
 package ru.masta.user.usermodule.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import ru.masta.user.usermodule.entity.UserData;
@@ -11,7 +13,7 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    private UserRepo repo;
+    private final UserRepo repo;
 
     public UserService(UserRepo repo) {
         this.repo = repo;
@@ -27,5 +29,13 @@ public class UserService {
 
     public UserData addUser(UserData user){
         return repo.save(user);
+    }
+
+    public Page<UserData> findByParam(String name, String lastName, PageRequest pageable) {
+        return repo.findByParam(name, lastName, pageable);
+    }
+
+    public UserData findByCardNumber(String card) {
+        return repo.findByCard(card);
     }
 }

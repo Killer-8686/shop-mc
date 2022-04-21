@@ -33,6 +33,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'ru.masta.entity:entity-module'
 
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix:+'
+
     runtimeOnly 'org.postgresql:postgresql'
 
     compileOnly 'org.projectlombok:lombok'

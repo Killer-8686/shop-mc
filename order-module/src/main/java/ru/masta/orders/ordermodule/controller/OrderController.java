@@ -8,12 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import ru.masta.entitymodule.entity.Order;
 import ru.masta.entitymodule.entity.Purchase;
+import ru.masta.entitymodule.entity.UserData;
 import ru.masta.orders.ordermodule.feign.UserFeignClient;
 import ru.masta.orders.ordermodule.service.ItemService;
 import ru.masta.orders.ordermodule.service.OrderService;
 import ru.masta.orders.ordermodule.service.PurchaseService;
 
 import java.util.List;
+import java.util.Objects;
 
 
 @RestController
@@ -70,12 +72,27 @@ public class OrderController {
                 }
             }
         }
+/*
 
+        // Вызов без вероятности, что модуль "user-module" будет недоступен
         if(userFeignClient.findById(order.getUserId())==null){
+            return new ResponseEntity("User with id: " + order.getUserId() + " not found", HttpStatus.NOT_ACCEPTABLE);
+        }*/
+
+        ResponseEntity<UserData> result = userFeignClient.findById(order.getUserId());
+
+
+        // Need fix. If user not found call UserFeignClientFallback.findById ???
+
+        if(result.getBody().getId()==-1){
+            return new ResponseEntity("Subsystem USERS not available, please try again later", HttpStatus.NOT_ACCEPTABLE);
+        }
+
+
+        if(result.getBody().getId()==null){
             return new ResponseEntity("User with id: " + order.getUserId() + " not found", HttpStatus.NOT_ACCEPTABLE);
         }
 
-        //purchaseService.addAll(order.getPurchases());
         return ResponseEntity.ok(service.add(order));
     }
 

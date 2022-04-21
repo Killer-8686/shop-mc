@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -37,73 +36,27 @@
                   <project path="$PROJECT_DIR$/order-module" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/entity-module" name="entity-module">
+                <projects>
+                  <project path="$PROJECT_DIR$/entity-module" />
+                </projects>
+              </build>
             </builds>
           </compositeBuild>
         </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="C:/Gradle/gradle-7.4.2" />
+        <option name="gradleJvm" value="11 (2)" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/api-gateway" />
+            <option value="$PROJECT_DIR$/entity-module" />
             <option value="$PROJECT_DIR$/eureka-client" />
             <option value="$PROJECT_DIR$/eureka-server" />
             <option value="$PROJECT_DIR$/github-config-server" />
             <option value="$PROJECT_DIR$/order-module" />
-            <option value="$PROJECT_DIR$/user-module" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/api-gateway" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/eureka-client" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/eureka-client" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/eureka-server" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/eureka-server" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/github-config-server" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/github-config-server" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/order-module" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/order-module" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/user-module" />
-        <option name="modules">
-          <set>
             <option value="$PROJECT_DIR$/user-module" />
           </set>
         </option>

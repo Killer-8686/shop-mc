@@ -7,7 +7,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.masta.user.usermodule.entity.UserData;
+import ru.masta.entitymodule.entity.UserData;
+
 import ru.masta.user.usermodule.search.UserSearchValues;
 import ru.masta.user.usermodule.service.UserService;
 

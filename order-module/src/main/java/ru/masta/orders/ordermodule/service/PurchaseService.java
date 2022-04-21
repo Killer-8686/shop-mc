@@ -1,7 +1,7 @@
 package ru.masta.orders.ordermodule.service;
 
 import org.springframework.stereotype.Service;
-import ru.masta.orders.ordermodule.entity.Purchase;
+import ru.masta.entitymodule.entity.Purchase;
 import ru.masta.orders.ordermodule.repo.PurchaseRepo;
 
 import java.util.List;

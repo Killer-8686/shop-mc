@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ru.masta.entitymodule.entity.Order;
+import ru.masta.entitymodule.entity.Purchase;
+import ru.masta.orders.ordermodule.feign.UserFeignClient;
 import ru.masta.orders.ordermodule.service.ItemService;
 import ru.masta.orders.ordermodule.service.OrderService;
-import ru.masta.orders.ordermodule.entity.Order;
-import ru.masta.orders.ordermodule.entity.Purchase;
 import ru.masta.orders.ordermodule.service.PurchaseService;
 
 import java.util.List;
@@ -22,12 +23,14 @@ public class OrderController {
     private OrderService service;
     private ItemService itemService;
     private PurchaseService purchaseService;
+    private UserFeignClient userFeignClient;
 
 
-    public OrderController(OrderService service, ItemService itemService, PurchaseService purchaseService) {
+    public OrderController(OrderService service, ItemService itemService, PurchaseService purchaseService, UserFeignClient userFeignClient) {
         this.service = service;
         this.itemService = itemService;
         this.purchaseService = purchaseService;
+        this.userFeignClient = userFeignClient;
     }
 
     @RequestMapping("/id")
@@ -66,6 +69,10 @@ public class OrderController {
                     return new ResponseEntity("Purchases not correctly", HttpStatus.NOT_ACCEPTABLE);
                 }
             }
+        }
+
+        if(userFeignClient.findById(order.getUserId())==null){
+            return new ResponseEntity("User with id: " + order.getUserId() + " not found", HttpStatus.NOT_ACCEPTABLE);
         }
 
         //purchaseService.addAll(order.getPurchases());

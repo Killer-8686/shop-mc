@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import ru.masta.orders.ordermodule.entity.Item;
+import ru.masta.entitymodule.entity.Item;
 import ru.masta.orders.ordermodule.repo.ItemRepo;
 import ru.masta.orders.ordermodule.repo.PurchaseRepo;
 

@@ -3,7 +3,7 @@ package ru.masta.orders.ordermodule.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.masta.orders.ordermodule.entity.Item;
+import ru.masta.entity.entitymodule.entity.Item;
 import ru.masta.orders.ordermodule.service.ItemService;
 
 import java.util.List;

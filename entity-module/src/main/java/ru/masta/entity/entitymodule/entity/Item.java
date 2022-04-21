@@ -1,4 +1,4 @@
-package ru.masta.orders.ordermodule.entity;
+package ru.masta.entity.entitymodule.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

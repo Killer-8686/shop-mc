@@ -3,8 +3,7 @@ package ru.masta.user.usermodule.service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-
-import ru.masta.user.usermodule.entity.UserData;
+import ru.masta.entity.entitymodule.entity.UserData;
 import ru.masta.user.usermodule.repo.UserRepo;
 
 import java.util.List;

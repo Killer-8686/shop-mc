@@ -1,4 +1,4 @@
-package ru.masta.orders.ordermodule.entity;
+package ru.masta.entity.entitymodule.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;

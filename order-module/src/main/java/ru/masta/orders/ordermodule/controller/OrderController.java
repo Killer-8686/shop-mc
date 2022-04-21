@@ -5,11 +5,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import ru.masta.entity.entitymodule.entity.Order;
+import ru.masta.entity.entitymodule.entity.Purchase;
 import ru.masta.orders.ordermodule.service.ItemService;
 import ru.masta.orders.ordermodule.service.OrderService;
-import ru.masta.orders.ordermodule.entity.Order;
-import ru.masta.orders.ordermodule.entity.Purchase;
 import ru.masta.orders.ordermodule.service.PurchaseService;
 
 import java.util.List;

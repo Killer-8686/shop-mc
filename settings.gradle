@@ -6,6 +6,7 @@ includeBuild 'api-gateway'
 includeBuild 'github-config-server'
 includeBuild 'user-module'
 includeBuild 'order-module'
+includeBuild 'entity-module'
 
 
 

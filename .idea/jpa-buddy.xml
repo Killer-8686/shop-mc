@@ -2,11 +2,5 @@
 <project version="4">
   <component name="JpaBuddyIdeaProjectConfig">
     <option name="defaultUnitInitialized" value="true" />
-    <option name="reverseEngineeringLastDbConnectionId" value="ad6cb3b0-1066-4c50-b78a-e49b9b3fb526_shop_module" />
-    <option name="reLastEntityCreationPackage" value="order-module/src/main/java/ru/masta/orders/ordermodule/entity" />
-    <reUseDbSnapshotConnections>
-      <dbConnection id="ad6cb3b0-1066-4c50-b78a-e49b9b3fb526_user_module" />
-    </reUseDbSnapshotConnections>
-    <option name="newEntityIdStrategy" />
   </component>
 </project>

@@ -7,7 +7,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.masta.entity.entitymodule.entity.Order;
 import ru.masta.entity.entitymodule.entity.UserData;
+import ru.masta.user.usermodule.mq.OrderBinding;
+import ru.masta.user.usermodule.mq.OrderProducer;
 import ru.masta.user.usermodule.search.UserSearchValues;
 import ru.masta.user.usermodule.service.UserService;
 
@@ -23,10 +26,12 @@ public class UserDataController {
     private final String NAME_SORT_COLUMN = "name";
     private int DEFAULT_PAGE_SIZE=100;
     private final UserService service;
+    private OrderProducer orderProducer;
 
     @Autowired
-    public UserDataController(UserService service) {
+    public UserDataController(UserService service, OrderProducer orderProducer) {
         this.service = service;
+        this.orderProducer = orderProducer;
     }
 
     @GetMapping("/all")
@@ -60,6 +65,8 @@ public class UserDataController {
         } catch (Exception w) {
             return new ResponseEntity("Name, lastname or card is exists", HttpStatus.NOT_ACCEPTABLE);
         }
+
+        orderProducer.newUserAdding(user1.getId());
 
         return ResponseEntity.ok(user1);
     }

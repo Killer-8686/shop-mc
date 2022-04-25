@@ -18,4 +18,8 @@ public class PurchaseService {
     public void addAll(List<Purchase> purchases) {
         purchaseRepo.saveAll(purchases);
     }
+
+    public void add(Purchase purchase) {
+        purchaseRepo.save(purchase);
+    }
 }
